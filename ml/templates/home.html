@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<body>
+  <div class="d-flex flex-row justify-content-between">
+    <header>
+      <h1 class="ml-4">MedConnect</h1>
+    </header>
+    <a class="btn btn-primary mt-4 mr-4" href="/logout">
+      <strong>Log Out</strong>
+    </a>
+  </div>
+
+  <!-- navbar -->
+
+  <div class="section-margin">
+    <div class="container">
+      <div class="tabs">
+        <ul class="ul">
+          <li class="active li">
+            <a href="/home">Home</a>
+          </li>
+          <li class="li">
+            <a href="/account">Account</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- navbar -->
+
+  <div class="section-margin">
+    <div class="container">
+      <center>
+        {% if account %}
+        <h1 class="margin-button">Welcome {{account.name}}</h1>
+        {% endif %}
+        <p class="margin-button">
+          You can chat with our chatbot to get diseases predictions
+        </p>
+        <a class="btn btn-primary margin-button" href="/chatbot">Chat With Us</a>
+      </center>
+    </div>
+  </div>
+
+
+  <footer>
+    <p>-Designed and Created by Group 10-</p>
+  </footer>
+  {% endblock %}
